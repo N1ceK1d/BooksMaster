@@ -1,0 +1,70 @@
+﻿<Page x:Class="BooksMaster.pages.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BooksMaster.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Menu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TabControl     
+            SnapsToDevicePixels="True"
+            TabStripPlacement="Top">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel
+                        Width="auto"
+                        Height="auto">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Text="Главная" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Frame x:Name="home" NavigationUIVisibility="Hidden" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel
+                        Width="auto"
+                        Height="auto">
+                        <TextBlock
+                             HorizontalAlignment="Center"
+                             Text="Коллекции" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Frame x:Name="collections" NavigationUIVisibility="Hidden" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel
+                        Width="auto"
+                        Height="auto">
+                        <TextBlock
+                             HorizontalAlignment="Center"
+                             Text="Профиль" />
+                    </StackPanel>
+                </TabItem.Header>
+                <Frame x:Name="profile" NavigationUIVisibility="Hidden" />
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel
+                        Width="auto"
+                        Height="auto">
+                        <Button
+                            x:Name="Exit"
+                            Click="Exit_Click"
+                            HorizontalAlignment="Center"
+                            Content="Выйти" />
+                    </StackPanel>
+                </TabItem.Header>
+               
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>
